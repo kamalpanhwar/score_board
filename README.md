@@ -46,9 +46,11 @@ You can run tests using following command line.
 ```
 rspec 
 ```
-Snapshot of main page
+#### Snapshot of main page
 ![Main Page](./scorboard_shot.png)
 
+#### Deployment
+![Deployed on Heroku](https://score-board-test.herokuapp.com/)
 Time start: 10:10
 Time End:  12:45 
 
