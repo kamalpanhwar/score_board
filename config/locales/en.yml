@@ -11,5 +11,7 @@ en:
       a: Goals Agains
       a: Difference
       pts: Points
+      link_to_actual: Actual File
     actual_file:
       heading: Display Actual file
+      back: Back

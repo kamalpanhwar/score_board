@@ -37,12 +37,12 @@ RSpec.describe Score, type: :model do
   end
 
   it 'is invalid with long team names' do
-    name = (51).times.map { (65 + rand(26)).chr }.join
+    name = 51.times.map { (65...91).to_a.sample.chr }.join
     expect(Score.new(team: name)).not_to be_valid
   end
 
   it 'is invalid with 2 character team name' do
-    name = (2).times.map { (65 + rand(26)).chr }.join
+    name = 2.times.map { (65...91).to_a.sample.chr }.join
     expect(Score.new(team: name)).not_to be_valid
   end
 end
