@@ -9,7 +9,7 @@ RSpec.describe Score, type: :model do
   end
 
   it 'is invalid with string in P' do
-    team = FactoryBot.attributes_for(:score, p: nil)
+    team = FactoryBot.attributes_for(:score, p: 'string')
     expect(Score.new(team)).not_to be_valid
   end
 
@@ -37,12 +37,12 @@ RSpec.describe Score, type: :model do
   end
 
   it 'is invalid with long team names' do
-    name = 51.times.map { 65 + rand(26).chr }.join
+    name = (51).times.map { (65 + rand(26)).chr }.join
     expect(Score.new(team: name)).not_to be_valid
   end
 
   it 'is invalid with 2 character team name' do
-    name = 2.times.map { 65 + rand(26).chr }.join
+    name = (2).times.map { (65 + rand(26)).chr }.join
     expect(Score.new(team: name)).not_to be_valid
   end
 end

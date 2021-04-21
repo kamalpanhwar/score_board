@@ -5,7 +5,7 @@ class ImportScore
   attr_reader :lines, :keys
 
   def initialize(file)
-    @liens = File.new(file).readlines
+    @lines = File.new(file).readlines
   end
 
   def import_file
@@ -19,20 +19,22 @@ class ImportScore
   def process_lines
     scores = []
     lines.each do |line|
-      next if line.include? '------'
+      next if line.include? '---------'
 
       params = {}
       values = line.strip.split(/\W+/)[1..]
       keys.each_with_index do |key, i|
-        params[key.downcase] = values[i] if valid_data(key.downcase, value[i])
+        params[key.downcase] = values[i] if valid_data(key.downcase, values[i])
       end
-    score << Score.new(params)
+      scores << Score.new(params)
     end
     scores
   end
 
   def save_data(scores)
-    # need model to save
+    ActiveRecord::Base.transaction do
+      scores.reject(&:save)
+    end
   end
 
   def headers
@@ -44,7 +46,7 @@ class ImportScore
     if key == 'team'
       value.instance_of? String
     else
-      value.instace_of? Integer
+      value.to_i.instance_of? Integer
     end
   end
 end
