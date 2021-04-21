@@ -47,5 +47,13 @@ You can run tests using following command line.
 rspec 
 ```
 
-Time start: 10:20
-Time End: 
+Time start: 10:10
+Time End:  12:45 
+
+
+
+References
+[Football score board reading terms](https://howtheyplay.com/team-sports/abbrev-GA-GF-GS-GD-MP-Caps-meaning-soccer)
+[Stack over flow question of csv file test](https://stackoverflow.com/questions/35340693/how-to-test-csv-import-with-rspec)
+[Tailwind installation issue of Postcss8/7](https://railsbytes.com/templates/XbBsG6)
+
