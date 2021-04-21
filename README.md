@@ -1,24 +1,51 @@
-# README
+# Sample project to import dat and show on web
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Prerequisites
 
-Things you may want to cover:
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+- Github
+- Ruby [2.7.2](https://github.com/organization/project-name/blob/master/.ruby-version#L1)
+- Rails [6.1.3](https://github.com/organization/project-name/blob/master/Gemfile#L12)
 
-* System dependencies
+```bash
+git clone git@github.com:kamalpanhwar/score_board.git
+```
 
-* Configuration
+##### 2. Create database.yml file
 
-* Database creation
+I am using defualt configuration, so if your postgres is set accordingly then it will work. But if you ahve any changed, please edit `config/database.yml`.
 
-* Database initialization
+```bash
+vim config/database.yml
+```
 
-* How to run the test suite
+##### 3. Create and setup the database
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following commands to create and setup the database.
 
-* Deployment instructions
+```ruby
+bundle exec rake db:create
+bundle exec rake db:setup
+```
 
-* ...
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+bundle exec rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
+
+
+##### 5. Running test cases
+
+You can run tests using following command line.
+```
+rspec 
+```
+
+Time start: 10:20
+Time End: 
