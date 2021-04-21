@@ -1,0 +1,10 @@
+%tr
+  = render partial: "row", locals: {data: score.team, highlight: false, centre: false}
+  = render partial: "row", locals: {data: score.p , highlight: false, centre: true}
+  = render partial: "row", locals: {data: score.w, highlight: true, centre: true}
+  = render partial: "row", locals: {data: score.l, highlight: false, centre: true}
+  = render partial: "row", locals: {data: score.d, highlight: false, centre: true}
+  = render partial: "row", locals: {data: score.f, highlight: false, centre: true}
+  = render partial: "row", locals: {data: score.a, highlight: false, centre: true}
+  = render partial: "row", locals: {data: score.f - score.a, highlight: true, centre: true}
+  = render partial: "row", locals: {data: score.pts, highlight: false, centre: true}

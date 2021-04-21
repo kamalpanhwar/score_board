@@ -1,0 +1,14 @@
+%td.px-6.py-4.whitespace-nowrap
+  - if centre
+    .text-sm.text-centre.font-mediumtext-gray-900
+      - if highlight
+        - if data > 0
+          %span.inline-flex.px-2.text-xs.font-semibold.text-center.text-green-800.bg-green-100.rounded-full.leading-5
+            = data
+        - else
+          %span.inline-flex.px-2.text-xs.font-semibold.text-center.text-red-800.bg-red-100.rounded-full.leading-5
+            = data
+      - else
+        = data
+  - else
+    = data

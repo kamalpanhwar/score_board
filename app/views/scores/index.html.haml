@@ -1,0 +1,13 @@
+.py-6.bg-gray-100
+  .mx-auto.max-w-7xl.sm:px-6.lg:px-8
+    %h2.font-medium.text-gray-900.truncate
+      %a.mr-1(href="#component-822ab4bf111e9a34063e651275b381e6") 
+        = t('scores.index.heading')
+    .flex.flex-col
+      .-my-2.overflow-x-auto.sm:-mx-6.lg:-mx-8
+        .inline-block.min-w-full.py-2.align-middle.sm:px-6.lg:px-8
+          .overflow-hidden.border-b.border-gray-200.shadow.sm:rounded-lg
+            %table.min-w-full.divide-y.divide-gray-200
+              = render "table_header"
+              = render partial: "table_body", locals: {scores: @scores}
+
