@@ -1,0 +1,6 @@
+Metrics/AbcSize:
+  Max: 15
+  Exclude:
+    - 'db/migrate/*'
+Metrics/BlockLength:
+  Max: 50
