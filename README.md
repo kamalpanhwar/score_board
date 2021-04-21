@@ -46,6 +46,8 @@ You can run tests using following command line.
 ```
 rspec 
 ```
+Snapshot of main page
+![Main Page](./scorboard_shot.png)
 
 Time start: 10:10
 Time End:  12:45 
